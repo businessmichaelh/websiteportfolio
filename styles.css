@@ -66,7 +66,6 @@ a:hover {
   }
 }
 .profile {
-
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -90,6 +89,14 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .profile-photo{
+    flex-direction: row;
+    text-align: left;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .drawing-photo{
     flex-direction: row;
     text-align: left;
     pointer-events: none;
