@@ -72,6 +72,7 @@ a:hover {
   margin-top: 4%;
   gap: 50%; /* or even 8px */
 }
+
 .profile-container
 {
   gap: 2rem;
@@ -84,8 +85,6 @@ a:hover {
   object-fit: cover;
   transform: translateX(50vh);
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .profile-photo{
