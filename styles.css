@@ -1,128 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* Base styles for my personal resume */
-
-*{
-  padding: 0;
+/* =========================
+   Base Styles
+========================= */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 :root {
-    --primary-color: #00c3ff;
-    --text-color: #727171;
+  --primary-color: #00c3ff;
+  --text-color: #727171;
 }
-html{
+
+html {
   font-size: 10px;
 }
+
 body {
-    background: black;
-    color: white;
-    font-family: Inter, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    z-index: 3;
+  max-width: 1440px;
+  padding: 0 4rem;
+  margin: 0 auto;
+  background: #070707;
+  color: white;
+  font-family: Inter, sans-serif;
 }
+
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+button {
+  margin-top: 2rem;
+  padding: 1.5vh 2vh;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2vh;
+  background-image: linear-gradient(to right, #ff105f, #ffad06);
+  box-shadow: 0 1% 4% rgba(0, 0, 0, .6);
+}
 
-.title{
-  color: var(--primary-color);
-  font-weight: 700;
+button:hover {
+  color: black;
+  text-align: center;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+/* =========================
+   Typography
+========================= */
+.title {
   font-size: 4rem;
-  font-family: Inter, sans-serif;
-}
-/* layouts */
-.container {
-    max-width: 1000px;
-    max-width: 90%;
-    margin: 0 auto;
-    box-shadow: 0 4px 24px rgba(34, 40, 49, 0.08);
-    display: grid;
-    padding: 5rem;
-    background: #070707;
-    gap: 4rem;
-
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
-.grid-container{
+.description {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--text-color);
+}
+
+.first-name {
+  display: block;
+  margin-bottom: -0.8rem;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 200;
+  color: white;
+  text-transform: uppercase;
+}
+
+.last-name {
+  display: block;
+  font-size: clamp(2.5rem, 15vw, 7rem);
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.profile-title {
+  margin-bottom: 0.8em;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #bfc3c9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.grid-container {
   display: grid;
-
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    grid-template-rows: 1fr;
-    padding: 3rem;
-    gap: 7rem;
-  }
-}
-.profile {
-  margin-bottom: 2rem;
+.profile-container {
   display: flex;
-  align-items: center;
-  margin-top: 4%;
-  gap: 50%; /* or even 8px */
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-.profile-container
-{
-  gap: 2rem;
+.profile-description {
+  max-width: 80%;
+  font-size: 1.6rem;
+  line-height: 2;
+  color: var(--text-color);
 }
+
 .profile-photoImg {
-  width: 350px;
-  height: 350px;
-  float:right;
-  right: 20%;
-  object-fit: cover;
-  transform: translateX(50vh);
+  order: 2;
 }
 
-@media only screen and (max-width: 768px) {
-  .profile-photo{
-    flex-direction: row;
-    text-align: left;
-    pointer-events: none;
-  }
+.drawing-photo {
+  border-radius: 6px;
+  display: flex;
 }
 
-@media only screen and (max-width: 768px) {
-  .drawing-photo{
-    flex-direction: row;
-    text-align: left;
-    pointer-events: none;
-  }
+.profile-info {
+  order: 1;
 }
+
 .icon-container {
-    position: absolute;
-    top: 2%;
-    right: 5%;
-    z-index: 100;
-}
-.social-icon {
-    width: 40px;
-    height: 40px;
-    max-width: 50px;
-    max-height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-left: 10px;
-    transition: transform 0.2s;
-    vertical-align: middle;
-}
-.social-icon:hover {
-    transform: scale(1.7);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  width: 100%;
 }
 
- .fly-in {
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.7);
+}
+
+/* =========================
+   Animations
+========================= */
+.fly-in {
   opacity: 0;
   transform: translateX(-60px);
   animation: flyInLeft 0.8s ease-out forwards;
@@ -133,226 +172,231 @@ a:hover {
     opacity: 1;
     transform: translateX(0);
   }
-} 
-
-
-/* Name */
-.first-name 
-{
-  color: white;
-  font-weight: 200;
-  font-size: clamp(2rem, 8vw, 4rem);
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: -0.8rem;
-}
-.last-name
-{
-  color: var(--primary-color);
-  font-weight: 700;
-  font-size: clamp(2.5rem, 15vw, 7rem);
-  text-transform: uppercase;
-  display: block;
-}
-/* Job */
-.profile-title{ 
-  font-size: 2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.8em;
-  color: #bfc3c9;
 }
 
-.description {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--text-color)
+.float {
+  animation: updown 3s linear infinite;
 }
 
-/* Resume */
+@keyframes updown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+/* =========================
+   Sections
+========================= */
+/* About */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.about-photo {
+  width: 350px;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-me-description {
+  line-height: 1.8;
+}
+
+/* Skills */
+.skill-container {
+  padding-top: 6rem;
+}
+
+.skill-items {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.logo-icon {
+  width: 96px;
+  height: 96px;
+  margin-top: 2rem;
+  border-radius: 12px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.logo-icon:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s;
+}
+
+/* Projects */
+.project-container {
+  padding-top: 6rem;
+}
+
+/* Resume Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 2px rgba(0, 0, 0, .3);
+}
+
+.modal.open {
+  opacity: 1;
+  z-index: 1;
+}
 
 .resume-img {
   width: 100%;
-  height: 70%;
+  height: 100%;
   max-height: 80vh;
   object-fit: contain;
-  display: block;
 }
 
-.download-link {
-    display: block;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 2vh 4vh;
-    background: #00c3ff;
-    transform: translateY(-30vh);
-    transform: translateX(10.5vw);
-    color: #fff;
-    border-radius: 1%;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.2s;
-    width: 30.6vw;
-
-}
-.download-link:hover {
-    background: #a100ff;
-    text-align: center;
-}
-    
-button{
-  background-image: linear-gradient( to right, #ff105f, #ffad06);
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  border-radius: 2vh;
-  border: 0;
-  box-shadow: 0 1% 4% rgba(0,0,0,.6);
+.closeModal {
+  margin: 0;
+  display: inline-block;
+  justify-content: center;
+  font-weight: bold;
   color: #fff;
   cursor: pointer;
-  padding: 1vh;
-  align-self: left;
-  width: 15vh;
-}
-button:hover {
-    color: rgb(0, 0, 0);
-    text-align: center;
+  z-index: 100;
+  width: 20%;
 }
 
-button:active
+.download-link{
+  width: 100%;
+  padding: 2rem;
+  background: var(--primary-color);
+}
+
+.download-link:hover {
+  background: #a100ff;
+}
+
+/* =========================
+   Contact
+========================= */
+.contact-title {
+  font-size: 24px;
+  text-align: center;
+  background-image: linear-gradient(#af0dd8, #d3d1d8);
+  color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+.contact-container{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 8rem;
+}
+
+.contact-box {
+  width: 700px;
+  border-color: #a100ff;
+  background-color: rgb(56, 56, 56);
+  padding-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;
+  border-radius: 20px;
+}
+
+.contact-form 
 {
- opacity: 0.8;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .profile-container{
-    flex-direction: row;
-    text-align: center;
-  }
+.contact-form div {
+  display: flex;
+  flex-direction: column;
 }
 
-/* About me */
-.profile-photo {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: inline;
-  float:left
-}
-.about-me{
-  float:right;
-  margin-top: 1rem;
-  margin-right: 3rem;
-  line-height: 2;
-}
-/* Knowledge */
-.skill-container {
-    top: 2%;
-    right: 3%;
-    z-index: 100;
-}
-.logo-icon {
-    width: 20vh;
-    height: 20vh;
-    object-fit: cover;
-    border-radius: 30%;
-    margin-top: 2rem;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4rem;
-    vertical-align: middle;
-}
-.logo-icon:hover {
-    transform: scale(1.5);
-}
-.float{
-  animation: updown 3s linear infinite;
-}
-@keyframes updown {
-    0% {
-      transform:translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10%);
-        transform: translateY(-10%);
-    }
-
-    100% {
-        transform: translateY(0);
-        transform:translateY(0);
-    }
+.contact-form textarea {
+  grid-column: span 2;
 }
 
-
-/* Projects */
-
-
-/* PDF */
-.modal
-{
-opacity: 0;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0,0,0,0.6);
-transition: all 0.3s ease-in-out;
-z-index: -1;
-display:flex;
-align-items: center;
-justify-content: center;
+.contact-form input, .contact-form textarea {
+  border-radius: 10px;
+  padding: 1rem;
 }
 
-  .modal.open
-  {
-    opacity: 1;
-    z-index: 1;
-  } 
-  .modal-inner{
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 10px 2px rgba(0,0,0,.3);
-    width: min(95vw, 1100px);
-    max-height: 90vh;
-    display: flex;
+.submit-button{
+  margin: 0;
+  background-image: linear-gradient(to right, #bc37dd, #27077e);
+  border-radius: 1; 
+  margin-bottom: 1rem;
+  grid-column: 1 / -1;
+}
+
+.contact-form label {
+    font-size: 14px;
+    margin-bottom: 2px;
+    margin-left: 8px;
+}
+
+/* Footer */
+.copyright {
+  padding: 2rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media screen and (max-width: 768px) {
+  .profile-container {
     flex-direction: column;
-    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .modal-inner{
+    width: 80%;
   }
 
-  .modal-inner .png
-  {
-    display: block;
-    width: 90%;
-    flex: 1 1 auto;
-    margin-bottom: 5%;
+  .about-container{
+    display: grid;
+    grid-template-columns: 1fr;
   }
   
-  .modal-inner .closeModal 
-  {
-    color: #fff;
-    position: relative;
-    top: 1vh;
-    right: 2vh;
-    transform: translateY(-60px);
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10000;
-}
-
-.modal-inner .closeModal:hover
-{
-    color: #000000;
-    z-index: 100001;
-
-}
-
-
-.copyright {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 40rem;
+  .profile-info {
+    order: 2;
+  }
+  .profile-photoImg {
+    order: 1;
+  }
+  .profile-description {
+    max-width: 100%;
+  }
 }
