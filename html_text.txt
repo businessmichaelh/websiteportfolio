@@ -32,8 +32,8 @@
             <p class="profile-title">Front-End Developer & Cybersecurity Management Degree</p>
             <p class="profile-description description">
                 Hello, my name is Michael and I am currently working as a Lead Server Technician with a 
-                degree in Cybersecurity Management that was obtained in Fall 2025. I have a good understanding on building secure, 
-                efficient websites. I have a background in Esports which has allowed me to build upon my team 
+                degree in Cybersecurity Management that was obtained in Fall 2025. I have experience building secure, 
+                efficient websites while having a background in Esports which has allowed me to build upon my team 
                 and leadership skills. Along with my computer skills, creativity, and strong passion, 
                 I have transitioned into understanding web development to further develop my ability to 
                 create user-friendly applications and better understand the security aspect of web development. 
@@ -46,28 +46,14 @@
     </div>
 
     <div class="modal" id="modal">
-    <div class="modal-inner">
-
-        <!-- Row: arrows + image -->
-        <div class="slider-row">
-            <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
-
-            <div class="slide-container">
-                <img src="Resume(3.8.2026).png" class="resume-img slide" alt="Resume Page 1">
-                <img src="Resume(3.8.2026)-1.png" class="resume-img slide" alt="Resume Page 2">
-            </div>
-
-            <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+        <div class="modal-inner">
+            <img src="Resume(3.8.2026).png" class="resume-img" alt="Resume">
+            <img src="Resume(3.8.2026)-1.png" alt="Resume" class="resume-img">
+            <a href="Resume(3.8.2026).pdf" class="download-link">Download my resume(PDF)</a>
+            <button id="closeModal" class="closeModal">Close</button>
         </div>
-
-        <!-- Column: download + close -->
-        <a href="Resume(3.8.2026).pdf" class="download-link">Download my resume (PDF)</a>
-        <button id="closeModal" class="closeModal">Close</button>
-
+        <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
     </div>
-</div>
-
-
 
     <main class="fly-in" style="animation-delay: 0.3s;">
         <div class="about-container">
