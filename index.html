@@ -1,155 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Herrera — IT Infrastructure & Cybersecurity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header class="icon-container fly-in" style="animation-delay: 0.1s;">
-        <a href="https://twitter.com/dark3stVal" target="_blank">
-            <img src="Xlogo.png" alt="Twitter/X Logo" class="X-icon social-icon">
-        </a>
-        <a href="https://www.linkedin.com/in/michael-herrera-7b13641a0/" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-icon social-icon">
-        </a>
-    </header>
 
-    <div class="profile-container fly-in" style="animation-delay: 0.2s;">
-        <div class="profile-photoImg">
-            <img src="SmallMichael.png" alt="Drawing of Michael Herrera" class="drawing-photo">
-        </div>
+<!-- Reading Progress Bar -->
+<div id="progress-bar"></div>
 
-        <div class="profile-info">
-            <h1 class="profile-name">
-                <span class="first-name"> Michael </span>
-                <span class="last-name"> Herrera</span>
-            </h1>
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">MH<span>.</span>dev</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-socials">
+    <a href="https://twitter.com/dark3stVal" target="_blank" title="Twitter/X">𝕏</a>
+    <a href="https://www.linkedin.com/in/michael-herrera-7b13641a0/" target="_blank" title="LinkedIn">in</a>
+  </div>
+  <div class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-            <p class="profile-title">Front-End Developer & Cybersecurity Management Degree</p>
-            <p class="profile-description description">
-                Hello, my name is Michael and I am currently working as a Lead Server Technician with a 
-                degree in Cybersecurity Management that was obtained in Fall 2025. I have a good understanding on building secure, 
-                efficient websites. I have a background in Esports which has allowed me to build upon my team 
-                and leadership skills. Along with my computer skills, creativity, and strong passion, 
-                I have transitioned into understanding web development to further develop my ability to 
-                create user-friendly applications and better understand the security aspect of web development. 
-                I am eager to apply my skills and knowledge.
-                <br />
-            </p>
-
-            <button id="openModal" class="openModal">Resume Here</button>
-        </div>
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <p class="hero-eyebrow">IT Infrastructure & Cybersecurity</p>
+      <h1 class="hero-name">
+        <span class="line1">Michael</span>
+        <span class="line2">Herrera</span>
+      </h1>
+      <p class="hero-title">Lead AI Server Technician // Cybersecurity Management</p>
+      <p class="hero-desc">
+        Building secure infrastructure at scale — from NVIDIA NVL GBL AI servers to web applications. 3+ years in high throughput technical operations, with a passion for engineering solutions that save time and money.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="openModal"><span>📄 View Resume</span></button>
+        <a href="#contact"><button class="btn-outline">Let's Connect</button></a>
+      </div>
     </div>
 
-    <div class="modal" id="modal">
-    <div class="modal-inner">
-
-        <!-- Row: arrows + image -->
-        <div class="slider-row">
-            <!-- LEFT BUTTON FOR MULTIPLE PICTURES -->
-          <!--   <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button> -->
-
-            <div class="slide-container">
-                <img src="Michael Herrera 2026.png" class="resume-img slide" alt="Resume Page 1">
-                <!-- <img src="Resume(3.8.2026)-1.png" class="resume-img slide" alt="Resume Page 2"> -->
-            </div>
-            <!-- right BUTTON FOR MULTIPLE PICTURES -->
-           <!-- <button class="arrow right" onclick="moveSlide(1)">&#10095;</button> -->
-        </div>
-
-        <!-- Column: download + close -->
-        <a href="Michael Herrera 2026.pdf"download-link">Download my resume (PDF)</a>
-        <button id="closeModal" class="closeModal">Close</button>
-
+    <!-- Terminal Card -->
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span class="terminal-title">michael@portfolio:~</span>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <!-- Typed by scripts.js -->
+      </div>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- About -->
+<section id="about">
+  <p class="section-label reveal">Profile</p>
+  <h2 class="section-title reveal">About <em>Me</em></h2>
+
+  <div class="about-grid">
+    <div class="about-photo-wrap reveal">
+      <img src="myphoto.png" alt="Michael Herrera" />
+    </div>
+    <div class="about-text reveal">
+      <div class="stat-row">
+        <div class="stat-box">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">$15K</span>
+          <span class="stat-label">Cost Saved / Rack</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">40%</span>
+          <span class="stat-label">Throughput Gain</span>
+        </div>
+      </div>
+      <p>
+        I'm a motivated IT Infrastructure Specialist and Cybersecurity Management graduate from Northwood University, currently working as a Lead AI Server Technician at SMS InfoComm, deploying NVIDIA NVL GBL AI servers for Dell.
+      </p>
+      <p>
+        As a former competitive Esports player and team leader, I bring strategic thinking and communication skills forged under pressure. I combine my hands on server experience with a growing foundation in web development bridging the gap between secure infrastructure and user-facing applications.
+      </p>
+      <p>
+        Based in Dallas, TX. Open to opportunities in IT infrastructure, cybersecurity, or web development.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Experience -->
+<section id="experience">
+  <p class="section-label reveal">Work History</p>
+  <h2 class="section-title reveal">Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-meta">
+        <span class="timeline-role">Lead AI Server Technician <span class="highlight-badge">⭐ Acting Team Lead</span></span>
+        <span class="timeline-date">Oct 2025 – Present</span>
+      </div>
+      <div class="timeline-company">SMS InfoComm Corporation Dallas, TX</div>
+      <ul class="timeline-bullets">
+        <li>Orchestrate technical validation and deployment of NVIDIA NVL GBL AI servers precision rack-and-stack, high density cabling, and thermal/liquid cooling inspections.</li>
+        <li>Engineered Bash scripts automating hardware component validation, increasing team testing throughput by <strong style="color:var(--cyan)">40%</strong>.</li>
+        <li>Conducted RCA on network failures; developed SOP preventing unnecessary BF3 SmartNIC replacements saving approx. <strong style="color:var(--gold)">$15,000 per rack</strong> in hardware costs.</li>
+        <li>Coordinate cross functional incident response with Dell, Wistron, and NVIDIA engineers to resolve critical zero day integration issues.</li>
+        <li>Manage 40+ daily technical escalations via ServiceMe; deliver data driven diagnostic reports to the Operations Manager.</li>
+        <li>Help train and mentor new technicians while staying hands on in technical work and troubleshooting.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Skills -->
+<section id="skills">
+  <p class="section-label reveal">Tech Stack</p>
+  <h2 class="section-title reveal">Expertise</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal" style="--card-accent: #00f5ff;">
+      <div class="skill-card-icon">🖥️</div>
+      <div class="skill-card-title">AI & Server Infrastructure</div>
+      <div class="skill-tags">
+        <span class="tag">NVIDIA NVL-GBL</span>
+        <span class="tag">HGX/NVLink</span>
+        <span class="tag">InfiniBand</span>
+        <span class="tag">iDRAC/IPMI</span>
+        <span class="tag">Redfish</span>
+        <span class="tag">NVMe/NIC</span>
+        <span class="tag">Liquid Cooling</span>
+        <span class="tag">GPU Topology</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal" style="--card-accent: #ff2d78;">
+      <div class="skill-card-icon">🐧</div>
+      <div class="skill-card-title">Systems Administration</div>
+      <div class="skill-tags">
+        <span class="tag">Linux (RHEL/Ubuntu)</span>
+        <span class="tag">Windows Server</span>
+        <span class="tag">AD/GPO</span>
+        <span class="tag">Bash Scripting</span>
+        <span class="tag">PowerShell</span>
+        <span class="tag">Asset Tracking</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal" style="--card-accent: #ffc300;">
+      <div class="skill-card-icon">🌐</div>
+      <div class="skill-card-title">Networking</div>
+      <div class="skill-tags">
+        <span class="tag">TCP/IP</span>
+        <span class="tag">VLANs</span>
+        <span class="tag">Cisco IOS</span>
+        <span class="tag">Wireshark</span>
+        <span class="tag">DHCP/ACL</span>
+        <span class="tag">SSH</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal" style="--card-accent: #a78bfa;">
+      <div class="skill-card-icon">☁️</div>
+      <div class="skill-card-title">Cloud & Development</div>
+      <div class="skill-tags">
+        <span class="tag">Azure VMs</span>
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">ReactJS</span>
+        <span class="tag">Git</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tech-strip reveal">
+    <div class="tech-chip"><div class="tech-chip-dot"></div>Linux</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:var(--magenta)"></div>HTML/CSS</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:#61DAFB"></div>ReactJS</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:#f0db4f"></div>JavaScript</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:#336791"></div>SQL</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:#4EAA25"></div>Bash</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:#3776AB"></div>Python</div>
+    <div class="tech-chip"><div class="tech-chip-dot" style="background:#0078d4"></div>Azure</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Education & Certs -->
+<section id="education">
+  <p class="section-label reveal">Credentials</p>
+  <h2 class="section-title reveal">Education & <em>Certifications</em></h2>
+
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-degree">B.S. Cybersecurity Management</div>
+      <div class="edu-school">Northwood University Midland, MI</div>
+      <div class="edu-date">Graduated December 2025</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">A.S. Computer Science</div>
+      <div class="edu-school">Richland College — Dallas, TX</div>
+      <div class="edu-date">Completed March 2021</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 3.2rem;">
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">Google IT Support Professional</div>
+        <span class="cert-status earned">✓ Earned</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">IT Professional Certificate</div>
+        <span class="cert-status earned">✓ Earned</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⏳</div>
+        <div class="cert-name">CompTIA A+</div>
+        <span class="cert-status progress">In Progress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Contact -->
+<section id="contact">
+  <p class="section-label reveal">Get In Touch</p>
+  <h2 class="section-title reveal">Let's <em>Connect</em></h2>
+
+  <div class="contact-wrapper">
+    <div class="contact-info reveal">
+      <h3>Open to New Opportunities</h3>
+      <p>Whether you have a role in IT infrastructure, cybersecurity, or web development or just want to talk tech my inbox is always open.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:michael_herrera00@yahoo.com">
+          <span class="contact-link-icon">✉️</span>
+          michael_herrera00@yahoo.com
+        </a>
+        <a class="contact-link" href="tel:4695855199">
+          <span class="contact-link-icon">📞</span>
+          (469) 585-5199
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/michael-herrera-7b13641a0/" target="_blank">
+          <span class="contact-link-icon">💼</span>
+          linkedin.com/in/michael-herrera-7b13641a0
+        </a>
+        <a class="contact-link" href="https://twitter.com/dark3stVal" target="_blank">
+          <span class="contact-link-icon">𝕏</span>
+          @dark3stVal
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal">
+      <div class="form-title">&gt; send_message.sh</div>
+      <form action="https://formspree.io/f/xldwvkwo" method="POST" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">FULL NAME</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">SUBJECT</label>
+          <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Collaboration" />
+        </div>
+        <div class="form-group">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" placeholder="Tell me about the opportunity..." required></textarea>
+        </div>
+        <button class="btn-send" type="submit"><span>SEND MESSAGE ↗</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span>© 2026 Michael Herrera. All rights reserved.</span>
+  <span style="color:var(--border);">Built with HTML · CSS · JS</span>
+  <span>Dallas, TX 🌆</span>
+</footer>
+
+<!-- Resume Modal -->
+<div id="modal">
+  <div class="modal-inner">
+    <div class="modal-header">
+      <span>Michael_Herrera_2026.pdf</span>
+      <button class="modal-close" id="closeModal">✕</button>
+    </div>
+    <img src="Michael Herrera 2026.png" class="resume-img" alt="Michael Herrera Resume" />
+    <a href="Michael Herrera 2026.pdf" download class="modal-download">
+      ⬇ Download Resume (PDF)
+    </a>
+  </div>
 </div>
 
-
-
-    <main class="fly-in" style="animation-delay: 0.3s;">
-        <div class="about-container">
-            <div class="about-photoImg">
-                <img src="myphoto.png" alt="Photo of Michael Herrera" class="about-photo">
-            </div>
-
-            <div class="about-info">
-                <h3 class="about title">About Me</h3>
-                <p class="about-me-description description">
-                    I am a motivated and adaptable professional with a degree in Cybersecurity Management, 
-                    from Northwood University, looking for experience in correlating fields. As a former 
-                    competitive Esports player and team leader, I bring strong communication, strategic 
-                    thinking, collaboration skills developed in high-pressure and fast-paced environments. 
-                    I have a solid foundation in web and software development, with knowledge in HTML, Java, SQL, 
-                    and ReactJS. While working hands-on with Servers, software and hardware, 
-                    I have developed a strong understanding of security protocols, network management, and system administration.
-                    I can work well in a team dynamic and am eager to contribute towards innovative, 
-                    security-focused solutions.
-
-                </p>
-            </div>
-        </div>
-
-        <div class="skill-container">
-            <h4 class="skills title">Expertise</h4>
-            <div class="skill-items float" style="animation-delay: .5;">
-                <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">
-                    <img src="Linux.png" alt="Linux Logo" class="Linux logo-icon">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
-                    <img src="html.png" alt="HTML Logo" class="HTML logo-icon">
-                </a>
-                <a href="https://react.dev/" target="_blank">
-                    <img src="ReactJS.png" alt="ReactJS Logo" class="ReactJS logo-icon">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
-                    <img src="Sql.png" alt="SQL Logo" class="SQL logo-icon">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
-                    <img src="Javascript.png" alt="Javascript Logo" class="Javascript logo-icon">
-                </a>
-            </div>
-        </div>
-
-        <div class="project-container">
-            <div class="group-3"></div>
-            <div class="Projects"></div>
-            <h5 class="Projects title"> Projects</h5>
-            <div class="project links">
-                <li>WIP</li>
-            </div>
-        </div>
-
-        <div class="contact-container">
-            <div class="contact-box">
-                <h5 class="contact-title"> Contact </h5>
-                <form class="contact-form" action="https://formspree.io/f/xldwvkwo" method="POST">
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="text" name="email "class="email" placeholder="Email" required>
-                    </div>
-                    <div>
-                        <label for= "name">Full Name: </label>
-                        <input type= "text" name="name" class="name" placeholder="First & Last" required>
-                    </div>
-                    <textarea type= "message" class="msg" name="message" placeholder="Your Message.." rows="15" required></textarea>
-                    <button class="submit-button" id="send" type="submit">Send</button>
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <footer class="fly-in" style="animation-delay: 0.4s;">
-        <div class="copyright">
-            <p>&copy; 2026 Michael Herrera's Website. All rights reserved</p>
-        </div>
-    </footer>
-    </div>
-    </div>
-</body>
 <script src="scripts.js"></script>
-
+</body>
 </html>
