@@ -20,6 +20,9 @@ document.getElementById('closeModal').addEventListener('click', () => modal.clas
 modal.addEventListener('click', e => {
   if (e.target === modal) modal.classList.remove('open');
 });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') modal.classList.remove('open');
+});
 
 // ── Scroll Reveal ─────────────────────────────────────
 const revealEls = document.querySelectorAll('.reveal');
